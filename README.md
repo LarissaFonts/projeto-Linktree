@@ -8,4 +8,6 @@ Criando linktree com a Rocketseat na trilha discover
 
 # Autor
 
-Larissa
+Larissa Pereira Fontes Santos
+
+https://www.linkedin.com/in/larissa-pereira-fontes-santos-518a9a205/
