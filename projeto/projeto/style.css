@@ -1,0 +1,28 @@
+    body {
+      background-image: url(./assets/bg-mobile.jpg);
+      /*adiciona imagem*/
+      background-repeat: no-repeat;
+      /*tira a repetiçao*/
+      background-position: top center;
+      /*muda o ponto do centro*/
+      background-size: cover;
+      /*coloca a imagem em tela toda*/
+    }
+
+    /* body{background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    } */
+
+    #container {
+      width: 350px;
+      /*largura*/
+      height: 712px;
+      /*altura*/
+      border: 1px red solid;
+      /*borda*/
+      margin: auto;
+      /*margen*/
+    }
+
+    #profile img {
+      width: 112px;
+    }
