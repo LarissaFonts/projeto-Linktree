@@ -1,3 +1,10 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    
     body {
       background-image: url(./assets/bg-mobile.jpg);
       /*adiciona imagem*/
@@ -12,17 +19,34 @@
     /* body{background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
     } */
 
+    body * {
+      font-family: "Inter", sans-serif;
+      color: #ffffff;
+    }
+
+    
     #container {
       width: 350px;
       /*largura*/
-      height: 712px;
-      /*altura*/
-      border: 1px red solid;
+      /*height: 712px; altura*/
+      /*border: 1px red solid;*/
       /*borda*/
-      margin: auto;
+      margin: 56px auto 0px;
       /*margen*/
     }
 
+    #profile {
+      text-align: center; /*alinha elementos inline*/
+      padding: 24px;
+    }
+    
     #profile img {
       width: 112px;
+      
+    }
+
+    #profile p{
+      font-weight: 500;
+      line-height: 24px;
+    
     }
