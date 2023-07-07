@@ -10,13 +10,13 @@
       --stroke-color: rgba(255, 255, 255, 0.5);
       --surface-color: rgba(255, 255, 255, 0.05);
       --surface-color-hover: rgba(0, 0, 0, 0.02);
-      --highligth-color: rgba(255, 255, 255, 0.2);
+      --highlight-color: rgba(255, 255, 255, 0.2);
       --switch-bg-url: url(./assets/moon-stars.svg);
     }
 
     .light {
       --text-color: black;
-      --bg-url: url(./assets/bg-desktop-light.png);
+      --bg-url: url(./assets/bg-mobile-light.jpg);
       --stroke-color: rgba(0, 0, 0, 0.5);
       --surface-color: rgba(0, 0, 0, 0.05);
       --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -33,6 +33,7 @@
       /*muda o ponto do centro*/
       background-size: cover;
       /*coloca a imagem em tela toda*/
+      height: 100vh;
     }
 
     /* body{background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
@@ -45,7 +46,7 @@
 
 
     #container {
-      width: 350px;
+      width: 100%;
       /*largura*/
       /*height: 712px; altura*/
       /*border: 1px red solid;*/
@@ -53,6 +54,7 @@
       margin: 56px auto 0px;
       /*margen*/
       padding: 0 24px;
+      max-width: 588px;
     }
 
     #profile {
@@ -92,11 +94,16 @@
       left: 0;
       z-index: 1;
       transform: translateY(-50%);
+
+      animation: slide-off 0.2s;
     }
 
     .light #switch button {
-      right: 0;
-      left: initial;
+      animation: slide-on 0.4s forwards;
+    }
+
+    #switch button:hover {
+      outline: 8px solid var(--highlight-color);
     }
 
     #switch span {
@@ -177,4 +184,37 @@
       padding: 24px 0;
       text-align: center;
       font-size: 14px;
+    }
+
+    /* media queries */
+    @media (min-width: 700px) {
+      :root {
+        --bg-url: url(./assets/bg-desktop.png);
+      }
+
+      .light {
+        --bg-url: url(./assets/bg-desktop-light.png)
+      }
+    }
+
+    /* animação */
+    @keyframes slide-on {
+      from {
+        left: 0;
+      }
+
+      to {
+        left: 50%
+      }
+
+    }
+
+    @keyframes slide-off {
+      from {
+        left: 50%;
+      }
+
+      to {
+        left: 0;
+      }
     }
